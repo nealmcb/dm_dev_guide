@@ -11,7 +11,7 @@ This document assumes a basic understanding of Rust and the LSST DM Stack.
 The de-facto location, and reference implementation, of rust within the lsst science pipelines is in a package called ``rubinoxide``.
 This does not mean developers are not allowed to use rust in another dedicated package, but unless there is a compelling reason to do so rust code should be placed in ``rubinoxide``.
 This guide assumes the package layout of ``rubinoxide``.
-Any other Rust based packages that are written should adhear to this as best as possible.
+Any other Rust based packages that are written should adhere to this as best as possible.
 
 2. Rust Version
 ---------------
@@ -30,7 +30,7 @@ All LSST Rust code must be compatible with the standard Rust toolchain provided 
 4. Code Organization
 --------------------
 
-Unlike the package-centric organization often seen in Python, packages containing rust code should me monolithic and not depend on other lsst packages. 
+Unlike the package-centric organization often seen in Python, packages containing rust code should be monolithic and not depend on other lsst packages. 
 
 * Top-Level Module: All Rust code will be bound to a single top-level module.
   This module will serve as the entry point for Python interaction.
@@ -99,7 +99,7 @@ The standard rubinoxide package initializes the pyo3_log crate to forward all lo
 
 * Rust packages should be built using maturin, which manages the complexities of compiling and bundling cargo products.  
 * Cargo additionally is to be used manage dependencies and run rust level tests.  
-* pip is used as the mechanism to locally depoly the wheels created by maturin  
+* pip is used as the mechanism to locally deploy the wheels created by maturin  
 * pytest is used to run python level unit tests  
 * coordinating these scripts for the developer is a Makefile
 
